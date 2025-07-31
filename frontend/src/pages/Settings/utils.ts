@@ -15,6 +15,7 @@ import {
 	multiIngestionSettings,
 	mySettings,
 	organizationSettings,
+	rolesPermissions,
 } from './config';
 
 export const getRoutes = (
@@ -59,7 +60,7 @@ export const getRoutes = (
 	settings.push(...alertChannels(t));
 
 	if (isAdmin) {
-		settings.push(...apiKeys(t));
+		settings.push(...apiKeys(t), ...rolesPermissions(t));
 	}
 
 	if ((isCloudUser || isEnterpriseSelfHostedUser) && isAdmin) {

@@ -3,6 +3,8 @@
 
 @import './periscope.scss';
 
+// Roles & Permissions page styles
+
 #root,
 html,
 body {
@@ -43,13 +45,16 @@ body {
 	&::-webkit-scrollbar {
 		width: 0.5rem;
 	}
+
 	&::-webkit-scrollbar-corner {
 		background: transparent;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background: rgb(136, 136, 136);
 		border-radius: 0.625rem;
 	}
+
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
@@ -83,6 +88,7 @@ body {
 			width: 0.25rem;
 			height: 0.25rem;
 		}
+
 		&::-webkit-scrollbar-thumb {
 			background: rgba(136, 136, 136, 0.4);
 			border-radius: 0.125rem;
@@ -91,6 +97,7 @@ body {
 				background: rgba(136, 136, 136, 0.7);
 			}
 		}
+
 		&::-webkit-scrollbar-track {
 			background: transparent;
 		}
@@ -409,13 +416,16 @@ body {
 	&::-webkit-scrollbar {
 		width: 0.3rem;
 	}
+
 	&::-webkit-scrollbar-corner {
 		background: transparent;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background: rgb(136, 136, 136);
 		border-radius: 0.625rem;
 	}
+
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
@@ -475,11 +485,9 @@ body {
 	border-radius: 4px;
 	padding: 16px;
 	border: 1px solid var(--bg-slate-400, #1d212d);
-	background: linear-gradient(
-		139deg,
-		rgba(18, 19, 23, 0.8) 0%,
-		rgba(18, 19, 23, 0.9) 98.68%
-	);
+	background: linear-gradient(139deg,
+			rgba(18, 19, 23, 0.8) 0%,
+			rgba(18, 19, 23, 0.9) 98.68%);
 	box-shadow: 4px 10px 16px 2px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(20px);
 
@@ -515,20 +523,20 @@ body {
 }
 
 // https://github.com/ant-design/ant-design/issues/41307
-.ant-picker-panels > *:first-child button.ant-picker-header-next-btn {
+.ant-picker-panels>*:first-child button.ant-picker-header-next-btn {
 	visibility: visible !important;
 }
 
-.ant-picker-panels > *:first-child button.ant-picker-header-super-next-btn {
+.ant-picker-panels>*:first-child button.ant-picker-header-super-next-btn {
 	visibility: visible !important;
 }
 
-.ant-picker-panels > *:last-child:not(:only-child) {
+.ant-picker-panels>*:last-child:not(:only-child) {
 	display: none !important;
 }
 
 .ant-picker-panel-container,
-.ant-picker-footer-extra > div {
+.ant-picker-footer-extra>div {
 	flex-wrap: wrap !important;
 }
 
@@ -547,6 +555,7 @@ body {
 	.ant-tooltip-inner {
 		background-color: var(--bg-slate-400, #1d212d);
 	}
+
 	.flexBtn {
 		display: flex;
 		align-items: center;
@@ -579,6 +588,7 @@ body {
 
 	// Enhanced legend light mode styles
 	.u-legend-enhanced {
+
 		// Light mode scrollbar styling
 		&::-webkit-scrollbar-thumb {
 			background: rgba(0, 0, 0, 0.2);
@@ -703,6 +713,7 @@ notifications	-  2050
 	from {
 		transform: rotate(0deg);
 	}
+
 	to {
 		transform: rotate(360deg);
 	}

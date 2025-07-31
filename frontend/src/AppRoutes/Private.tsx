@@ -19,7 +19,7 @@ import { OrgPreference } from 'types/api/preferences/preference';
 import { Organization } from 'types/api/user/getOrganization';
 import { UserResponse } from 'types/api/user/getUser';
 import { USER_ROLES } from 'types/roles';
-import { routePermission } from 'utils/permission';
+import { routePermission } from 'utils/permission/storeHelpers';
 
 import routes, {
 	LIST_LICENSES,

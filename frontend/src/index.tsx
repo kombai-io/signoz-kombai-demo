@@ -10,7 +10,8 @@ import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
-import store from 'store';
+import { PersistGate } from 'redux-persist/integration/react';
+import store, { persistor } from 'store';
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -42,9 +43,11 @@ if (container) {
 				<TimezoneProvider>
 					<QueryClientProvider client={queryClient}>
 						<Provider store={store}>
-							<AppProvider>
-								<AppRoutes />
-							</AppProvider>
+							<PersistGate loading={null} persistor={persistor}>
+								<AppProvider>
+									<AppRoutes />
+								</AppProvider>
+							</PersistGate>
 						</Provider>
 					</QueryClientProvider>
 				</TimezoneProvider>

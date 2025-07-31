@@ -1,6 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { ROLES } from 'types/roles';
-import { componentPermission, ComponentTypes } from 'utils/permission';
+import { ComponentTypes } from 'utils/permission';
+import { componentPermission } from 'utils/permission/storeHelpers';
 
 const useComponentPermission = (
 	component: ComponentTypes[],

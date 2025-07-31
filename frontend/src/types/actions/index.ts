@@ -3,12 +3,14 @@ import { GlobalTimeAction } from './globalTime';
 import { LogsActions } from './logs';
 import { MetricsActions } from './metrics';
 import { TraceActions } from './trace';
+import { PermissionActions } from './permission';
 
 type AppActions =
 	| AppAction
 	| GlobalTimeAction
 	| MetricsActions
 	| TraceActions
-	| LogsActions;
+	| LogsActions
+	| PermissionActions;
 
 export default AppActions;

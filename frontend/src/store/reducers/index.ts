@@ -4,6 +4,7 @@ import appReducer from './app';
 import globalTimeReducer from './global';
 import { LogsReducer } from './logs';
 import metricsReducers from './metric';
+import permissionReducer from './permission';
 import { ServiceMapReducer } from './serviceMap';
 import traceReducer from './trace';
 import { usageDataReducer } from './usage';
@@ -16,6 +17,7 @@ const reducers = combineReducers({
 	app: appReducer,
 	metrics: metricsReducers,
 	logs: LogsReducer,
+	permission: permissionReducer,
 });
 
 export type AppState = ReturnType<typeof reducers>;

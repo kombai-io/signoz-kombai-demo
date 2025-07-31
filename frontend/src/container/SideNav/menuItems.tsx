@@ -26,6 +26,7 @@ import {
 	Route,
 	ScrollText,
 	Settings,
+	Shield,
 	Slack,
 	Unplug,
 	User,
@@ -350,6 +351,13 @@ export const settingsMenuItems: SidebarItem[] = [
 		icon: <Layers2 size={16} />,
 		isEnabled: true,
 		itemKey: 'keyboard-shortcuts',
+	},
+	{
+		key: ROUTES.ROLES_PERMISSIONS,
+		label: 'Roles & Permissions',
+		icon: <Shield size={16} />,
+		isEnabled: true,
+		itemKey: 'roles-permissions',
 	},
 ];
 

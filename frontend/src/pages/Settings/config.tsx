@@ -24,9 +24,11 @@ import {
 	KeySquare,
 	Pencil,
 	Plus,
+	Shield,
 	User,
 } from 'lucide-react';
 import ChannelsEdit from 'pages/ChannelsEdit';
+import RolesPermissions from 'pages/RolesPermissions/RolesPermissions';
 import Shortcuts from 'pages/Shortcuts';
 
 export const organizationSettings = (t: TFunction): RouteTabProps['routes'] => [
@@ -71,17 +73,17 @@ export const ingestionSettings = (t: TFunction): RouteTabProps['routes'] => [
 export const multiIngestionSettings = (
 	t: TFunction,
 ): RouteTabProps['routes'] => [
-	{
-		Component: MultiIngestionSettings,
-		name: (
-			<div className="periscope-tab">
-				<Cpu size={16} /> {t('routes:ingestion_settings').toString()}
-			</div>
-		),
-		route: ROUTES.INGESTION_SETTINGS,
-		key: ROUTES.INGESTION_SETTINGS,
-	},
-];
+		{
+			Component: MultiIngestionSettings,
+			name: (
+				<div className="periscope-tab">
+					<Cpu size={16} /> {t('routes:ingestion_settings').toString()}
+				</div>
+			),
+			route: ROUTES.INGESTION_SETTINGS,
+			key: ROUTES.INGESTION_SETTINGS,
+		},
+	];
 
 export const generalSettings = (t: TFunction): RouteTabProps['routes'] => [
 	{
@@ -199,5 +201,18 @@ export const editAlertChannels = (t: TFunction): RouteTabProps['routes'] => [
 		),
 		route: ROUTES.CHANNELS_EDIT,
 		key: ROUTES.CHANNELS_EDIT,
+	},
+];
+
+export const rolesPermissions = (t: TFunction): RouteTabProps['routes'] => [
+	{
+		Component: () => <RolesPermissions initialTab='route' />,
+		name: (
+			<div className="periscope-tab">
+				<Shield size={16} /> Roles & Permissions
+			</div>
+		),
+		route: ROUTES.ROLES_PERMISSIONS,
+		key: ROUTES.ROLES_PERMISSIONS,
 	},
 ];

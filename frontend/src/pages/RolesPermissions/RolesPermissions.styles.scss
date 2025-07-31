@@ -1,0 +1,89 @@
+@import './components/PermissionFilters/PermissionFilters.styles.scss';
+@import './components/PermissionsTable/PermissionsTable.styles.scss';
+
+.roles-permissions-page {
+  display: flex;
+  flex-direction: column;
+  background: rgba(11, 12, 14, 1);
+
+  .page-header {
+    .page-title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-vanilla-100);
+    }
+
+    .page-subtitle {
+      font-size: 14px;
+      color: var(--text-vanilla-400);
+      margin-top: 4px;
+      display: block;
+    }
+  }
+
+  .page-content {
+    flex: 1;
+    padding: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .permissions-tabs {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .tab-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 16px;
+      }
+
+      .table-container {
+        flex: 1;
+        overflow: auto;
+        background: var(--bg-vanilla-100);
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+.lightMode {
+  .roles-permissions-page {
+    background: var(--bg-vanilla-100);
+
+    .page-header {
+      .page-title {
+        color: var(--text-slate-400);
+      }
+
+      .page-subtitle {
+        color: var(--text-slate-300);
+      }
+    }
+
+    .page-content {
+      .table-container {
+        background: var(--bg-vanilla-100);
+        border-color: var(--bg-vanilla-300);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .roles-permissions-page {
+    .page-content {
+      padding: 16px;
+
+      .permissions-tabs {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

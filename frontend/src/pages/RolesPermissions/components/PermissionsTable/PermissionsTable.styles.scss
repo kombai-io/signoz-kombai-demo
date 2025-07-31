@@ -1,0 +1,38 @@
+.permissions-table-container {
+  .permissions-table {
+    .permission-description {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .permission-key {
+      font-size: 13px;
+      font-family: 'Fira Code', monospace;
+      background: var(--bg-slate-500);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .roles-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .roles-multiselect {
+        width: 100%;
+        min-width: 200px;
+      }
+    }
+  }
+}
+
+.lightMode {
+  .permissions-table-container {
+    .permissions-table {
+      .permission-key {
+        background: var(--bg-vanilla-300);
+        color: var(--text-slate-400);
+      }
+    }
+  }
+}

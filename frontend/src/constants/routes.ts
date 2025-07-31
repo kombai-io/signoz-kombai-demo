@@ -61,6 +61,7 @@ const ROUTES = {
 	WORKSPACE_LOCKED: '/workspace-locked',
 	WORKSPACE_SUSPENDED: '/workspace-suspended',
 	SHORTCUTS: '/settings/shortcuts',
+	ROLES_PERMISSIONS: '/settings/roles-permissions',
 	INTEGRATIONS: '/integrations',
 	MESSAGING_QUEUES_BASE: '/messaging-queues',
 	MESSAGING_QUEUES_KAFKA: '/messaging-queues/kafka',

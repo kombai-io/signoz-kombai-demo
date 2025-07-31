@@ -1,0 +1,58 @@
+.permission-filters {
+  padding: 16px 0;
+
+  .filters-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    .search-container {
+      flex: 1;
+      min-width: 200px;
+      max-width: 400px;
+
+      .search-input {
+        width: 100%;
+      }
+    }
+
+    .filter-selects {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      .roles-filter,
+      .permissions-filter {
+        min-width: 150px;
+      }
+    }
+
+    .export-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filters-row {
+      flex-direction: column;
+      align-items: stretch;
+
+      .search-container {
+        max-width: none;
+      }
+
+      .filter-selects {
+        justify-content: space-between;
+      }
+
+      .export-button {
+        align-self: flex-end;
+      }
+    }
+  }
+}
